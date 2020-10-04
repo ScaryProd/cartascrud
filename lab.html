@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+    1. id
+    2. weight
+    3. all types
+    4. height
+    5. base_experience
+    6. image (data.sprites.front_default)
+-->
+<html lang="en">
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
+ <script src= "./utils.js"></script>
+<div id="myDIV" class="header">
+    <h2>Pokedex</h2>
+    item: <input type="text" id="myInput">
+    <button onclick="newElement()" >Add</span>
+</div>
+
+<ul id="myUL"></ul>
+<div id="totalDiv">
+    <span>image: </span> <br>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/25.png" id="imgSpan" width="255" height="255">
+    <br>
+    <span>ID: </span>
+    <span id="idSpan"></span>
+    <br>
+    <span>weight: </span>
+    <span id="weightSpan"></span>
+    <br>
+    <span>Types: </span>
+    <span id = "typeSpan"></span>
+    <br>
+    <span>height: </span>
+    <span id="heightSpan"></span>
+    <br>
+    <span>base exp: </span>
+    <span id="baseSpan"></span>
+    <br>
+</div>
+
+<button onclick="callSnorlax()">debugSnorlax</span>
+
+</html>
