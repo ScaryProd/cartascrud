@@ -100,7 +100,16 @@ async function showCreate(){
   var desc = document.getElementById("inDesc").value
   var type = document.getElementById("inType").value
   var img = document.getElementById("inImg").value
-  //codigo para mandarlo a mongoose 
+  //codigo para mandarlo a mongoose
+  var responseData
+  try {
+    const response = await axios.get(`http://localhost:8000/card/create${id}`);
+    //console.log(response.data.weight);
+    responseData = response;
+  } catch (error) {
+    console.error(error);
+  }
+
   document.getElementById("idSpan").innerHTML
   document.getElementById("nameSpan").innerHTML
   document.getElementById("typeSpan").innerHTML
@@ -115,6 +124,14 @@ async function showGet(){
   var type = document.getElementById("inType").value
   var img = document.getElementById("inImg").value
   //codigo para mandarlo a mongoose 
+  var responseData
+  try {
+    const response = await axios.get(`http://localhost:8000/card/${id}`);
+    //console.log(response.data.weight);
+    responseData = response;
+  } catch (error) {
+    console.error(error);
+  }
   document.getElementById("idSpan").innerHTML
   document.getElementById("nameSpan").innerHTML
   document.getElementById("typeSpan").innerHTML
@@ -129,6 +146,14 @@ async function showgetAll(){
   var type = document.getElementById("inType").value
   var img = document.getElementById("inImg").value
   //codigo para mandarlo a mongoose 
+  var responseData
+  try {
+    const response = await axios.get(`http://localhost:8000/cards/`);
+    //console.log(response.data.weight);
+    responseData = response;
+  } catch (error) {
+    console.error(error);
+  }
   document.getElementById("idSpan").innerHTML
   document.getElementById("nameSpan").innerHTML
   document.getElementById("typeSpan").innerHTML
@@ -143,6 +168,14 @@ async function showUpdate(){
   var type = document.getElementById("inType").value
   var img = document.getElementById("inImg").value
   //codigo para mandarlo a mongoose 
+  var responseData
+  try {
+    const response = await axios.get(`http://localhost:8000/card/update/${id}`);
+    //console.log(response.data.weight);
+    responseData = response;
+  } catch (error) {
+    console.error(error);
+  }
   document.getElementById("idSpan").innerHTML
   document.getElementById("nameSpan").innerHTML
   document.getElementById("typeSpan").innerHTML
@@ -157,6 +190,14 @@ async function showDelete(){
   var type = document.getElementById("inType").value
   var img = document.getElementById("inImg").value
   //codigo para mandarlo a mongoose 
+  var responseData
+  try {
+    const response = await axios.get(`http://localhost:8000/card/delete/${id}`);
+    //console.log(response.data.weight);
+    responseData = response;
+  } catch (error) {
+    console.error(error);
+  }
   document.getElementById("idSpan").innerHTML
   document.getElementById("nameSpan").innerHTML
   document.getElementById("typeSpan").innerHTML

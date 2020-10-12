@@ -45,23 +45,23 @@ export class Server {
     })
 
     //getAll
-    app.get('/cards', async (req, res) => {
+    app.get('/cards/', async (req, res) => {
       let card = await cardsDataSource.get({filter: req.query})
       res.send(card)
     })
 
     //create
-    app.post('/card', async (req, res) => {
+    app.post('/card/create/:id', async (req, res) => {
       // handle of req
     })
 
     //update
-    app.put('/card/:id', async (req, res) => {
+    app.put('/card/update/:id', async (req, res) => {
 
     })
 
     //delete
-    app.delete('/card/:id', async (req, res) => {
+    app.delete('/card/delete/:id', async (req, res) => {
 
     })
 

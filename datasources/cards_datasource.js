@@ -45,15 +45,29 @@ export default class CardDatasource {
   }
 
   async create({id, filter}) {
-
+    let id_obj = id
+    let query = Object.assign({}, id_obj, filter)
+    let cardModel = await this.CardModelPromise()
+    //cardModel.insert(query)
+    return
   }
 
-  async update() {
-
+  async update({id, filter}) {
+    let id_obj = id
+    let query = Object.assign({}, id_obj, filter)
+    let cardModel = await this.CardModelPromise()
+    //cardModel.remove(id)
+    //cardModel.insert(query)
+    return cardModel.find(query)
   }
 
-  async delete() {
+  async delete(id, filter) {
+    let id_obj = id
+    let query = Object.assign({}, id_obj, filter)
+    let cardModel = await this.CardModelPromise()
 
+    //cardModel.remove(query)
+    return
   }
 
 }
