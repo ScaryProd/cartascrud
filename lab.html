@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <!--
-    1. id
-    2. weight
-    3. all types
-    4. height
-    5. base_experience
-    6. image (data.sprites.front_default)
+    1. create
+    2. get
+    3. getAll
+    4. update
+    5. delete
 -->
 <html lang="en">
  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
  <script src= "./utils.js"></script>
 <div id="myDIV" class="header">
-    <h2>Pokedex</h2>
-    item: <input type="text" id="myInput">
-    <button onclick="newElement()" >Add</span>
+    <h2>Pokemon Cards</h2>
+    <button onclick="showCreate()">Create</button>
+    <button onclick="showGet()">Get</button>
+    <button onclick="showGetAll()">GetAll</button>
+    <button onclick="showUpdate()">Update</button>
+    <button onclick="showDelete()">Delete</button>
+
+    <br>
+    id: <input type="text" id="inId">
+    <br>
+    <input type="text" id="inName" placeholder="Name">
+    <input type="text" id="inDesc" placeholder="Description">
+    <input type="text" id="inType" placeholder="Type">
+    <input type="text" id="inImg" placeholder="Image URL">
+    <!--
+    <button onclick="confirm()" >Confirm</span>
+    -->
+    
 </div>
 
 <ul id="myUL"></ul>
@@ -24,17 +38,14 @@
     <span>ID: </span>
     <span id="idSpan"></span>
     <br>
-    <span>weight: </span>
-    <span id="weightSpan"></span>
+    <span>Name: </span>
+    <span id="nameSpan"></span>
     <br>
     <span>Types: </span>
     <span id = "typeSpan"></span>
     <br>
-    <span>height: </span>
-    <span id="heightSpan"></span>
-    <br>
-    <span>base exp: </span>
-    <span id="baseSpan"></span>
+    <span>Description: </span>
+    <span id="descSpan"></span>
     <br>
 </div>
 

@@ -3,10 +3,13 @@ import {PORT} from './confs.js'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import {Router} from './router.js'
+import CardsDatasource from './datasources/cards_datasource.js'
 
 import axios from 'axios'
 
 let pokemons = {}
+
+let cardsDataSource = new CardsDatasource()
 
 async function getPokemon(pokemonValue) {
   try {
@@ -35,6 +38,33 @@ export class Server {
     app.use(bodyParser.json());
     new Router({app})
     
+    //get
+    app.get('/card/:id', async (req, res) => {
+      let card = await cardsDataSource.get({id: req.params.id, filter: req.query, body: req.body})
+      res.send(card)
+    })
+
+    //getAll
+    app.get('/cards', async (req, res) => {
+      let card = await cardsDataSource.get({filter: req.query})
+      res.send(card)
+    })
+
+    //create
+    app.post('/card', async (req, res) => {
+      // handle of req
+    })
+
+    //update
+    app.put('/card/:id', async (req, res) => {
+
+    })
+
+    //delete
+    app.delete('/card/:id', async (req, res) => {
+
+    })
+
     app.get('/:pokemonName', async (req,res) => {
       //console.log('recieved:')
       console.log(req.params.pokemonName)
@@ -56,6 +86,8 @@ export class Server {
 
       res.send(pokemon.data)
     })
+
+    
 
     app.listen(PORT, () => {
       console.log('Example app')

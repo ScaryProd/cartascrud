@@ -91,3 +91,75 @@ async function newElement() {
   
 
 }
+
+//funciones
+
+async function showCreate(){
+  var id = document.getElementById("inID").value
+  var name = document.getElementById("inName").value
+  var desc = document.getElementById("inDesc").value
+  var type = document.getElementById("inType").value
+  var img = document.getElementById("inImg").value
+  //codigo para mandarlo a mongoose 
+  document.getElementById("idSpan").innerHTML
+  document.getElementById("nameSpan").innerHTML
+  document.getElementById("typeSpan").innerHTML
+  document.getElementById("descSpan").innerHTML
+  document.getElementById("imgSpan").src
+}
+
+async function showGet(){
+  var id = document.getElementById("inID").value
+  var name = document.getElementById("inName").value
+  var desc = document.getElementById("inDesc").value
+  var type = document.getElementById("inType").value
+  var img = document.getElementById("inImg").value
+  //codigo para mandarlo a mongoose 
+  document.getElementById("idSpan").innerHTML
+  document.getElementById("nameSpan").innerHTML
+  document.getElementById("typeSpan").innerHTML
+  document.getElementById("descSpan").innerHTML
+  document.getElementById("imgSpan").src
+}
+
+async function showgetAll(){
+  var id = document.getElementById("inID").value
+  var name = document.getElementById("inName").value
+  var desc = document.getElementById("inDesc").value
+  var type = document.getElementById("inType").value
+  var img = document.getElementById("inImg").value
+  //codigo para mandarlo a mongoose 
+  document.getElementById("idSpan").innerHTML
+  document.getElementById("nameSpan").innerHTML
+  document.getElementById("typeSpan").innerHTML
+  document.getElementById("descSpan").innerHTML
+  document.getElementById("imgSpan").src
+}
+
+async function showUpdate(){
+  var id = document.getElementById("inID").value
+  var name = document.getElementById("inName").value
+  var desc = document.getElementById("inDesc").value
+  var type = document.getElementById("inType").value
+  var img = document.getElementById("inImg").value
+  //codigo para mandarlo a mongoose 
+  document.getElementById("idSpan").innerHTML
+  document.getElementById("nameSpan").innerHTML
+  document.getElementById("typeSpan").innerHTML
+  document.getElementById("descSpan").innerHTML
+  document.getElementById("imgSpan").src
+}
+
+async function showDelete(){
+  var id = document.getElementById("inID").value
+  var name = document.getElementById("inName").value
+  var desc = document.getElementById("inDesc").value
+  var type = document.getElementById("inType").value
+  var img = document.getElementById("inImg").value
+  //codigo para mandarlo a mongoose 
+  document.getElementById("idSpan").innerHTML
+  document.getElementById("nameSpan").innerHTML
+  document.getElementById("typeSpan").innerHTML
+  document.getElementById("descSpan").innerHTML
+  document.getElementById("imgSpan").src
+}
